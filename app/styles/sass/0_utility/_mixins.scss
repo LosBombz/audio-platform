@@ -1,0 +1,25 @@
+/*  ==========================================================================
+    Mixins
+    ========================================================================== */
+
+     /**
+      * Sets font-size and line-height properties
+      * - values are output twice: rem & px (px is fallback for older browsers that don't recognize rem)
+      */
+    //Mixin to easily convert font-size and optionally line height into rems with a px fallback. Ex. @include font-size(12, 20);
+    //
+    //Example: @include font-size(16, 24); //16px font-size, 24px line-height.
+     @mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.5, $important: "not-important") {
+         @if $important == "not-important" {
+             font-size: $sizeValue * 1 + px;
+             line-height: $line * 1 + px;
+             font-size: $sizeValue / 10 + rem;
+             line-height: $line / 10 + rem;
+         }
+         @else {
+             font-size: $sizeValue * 1 + px !important;
+             line-height: $line * 1 + px !important;
+             font-size: $sizeValue / 10 + rem !important;
+             line-height: $line / 10 + rem !important;
+         }
+     }

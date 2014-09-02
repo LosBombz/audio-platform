@@ -1,0 +1,116 @@
+/* https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list */
+
+/*  ==========================================================================
+    Core - Section Elements
+    ========================================================================== */
+	/**
+	 *  All selector
+	 */
+	* {
+		@include box-sizing(border-box); // establishes border-box model for all elements
+		word-wrap: normal;
+		-webkit-tap-highlight-color: rgba(0,0,0,0); // Remove default tappable touch color in iOS
+	}
+
+	/**
+	 *  Root element
+	 */
+	html {
+		font-size: 100%; // Sets up the Base 10 stuff
+		height: 100%;
+	}
+
+	/**
+	 *  Represents the content of an HTML document.
+	 */
+	body {
+
+	}
+
+	/**
+	 * Heading elements implement six levels of document headings
+	 */
+	h1, h2, h3, h4, h5, h6 {
+
+	}
+
+		h1 {
+
+		}
+
+		h2 {
+
+		}
+
+		h3{
+
+		}
+
+		h4{
+
+		}
+
+		h5{
+
+		}
+
+		h6{
+
+		}
+
+	
+	/**
+	 *  Defines a link.
+	 */
+	a {
+		&:active{
+			
+		}
+		&:hover{
+
+		}
+	}
+	
+	/**
+	 *  Represents emphasized text, like a stress accent.
+	 */
+	em {
+
+	}
+
+	/**
+	 *  Represents especially important text.
+	 */
+	strong {
+
+	}
+
+	
+	/**
+	 *  Defines a portion that should be displayed as a paragraph.
+	 */
+	p {
+
+	}
+
+
+	/**
+	 *  Defines an ordered list of items.
+	 */
+	ol {
+
+	}
+
+	/**
+	 *  Defines an unordered list of items.
+	 */
+	ul {
+
+	}
+
+	/**
+	 *  Defines a item of an enumeration list.
+	 */
+	li {
+
+	}

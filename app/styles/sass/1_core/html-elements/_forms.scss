@@ -1,0 +1,128 @@
+/* https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list */
+
+/*  ==========================================================================
+    Core - Forms
+    ========================================================================== */
+
+	/**
+	 *  Represents a form , consisting of controls, that can be submitted to a server for processing.
+	 */
+	form {
+
+	}
+
+	/**
+	 *  Represents a set of controls.
+	 */
+	fieldset {
+
+	}
+
+		/**
+		 *  Represents the caption for a <fieldset>.
+		 */
+		legend {
+
+		}
+
+	/**
+	 *  Represents a typed data field allowing the user to edit the data.
+	 */
+	input {
+
+	}
+		
+		input[type="submit"]{
+
+		}
+
+		input[type="text"] {
+
+		}
+
+		input[type="password"] {
+
+		}
+
+		input[type="radio"] {
+
+		}
+
+		input[type="checkbox"]{
+
+		}
+
+	/**
+	 *  Represents a button.
+	 */
+	button {
+
+	}
+
+	/**
+	 *  Represents a control allowing selection among a set of options.
+	 */
+	select {
+
+	}
+
+	/**
+	 *  Represents a set of predefined options for other controls.
+	 *  HTML5
+	 */
+	datalist {
+
+	}
+
+	/**
+	 *  Represents a set of options , logically grouped.
+	 */
+	optgroup {
+
+	}
+
+		/**
+		 *  Represents an option in a <select> element, or a suggestion of a <datalist> element.
+		 */
+		option {
+
+		}
+
+	/**
+	 *  Represents a multiline text edit control.
+	 */
+	textarea {
+
+	}
+
+	/**
+	 *  Represents a key-pair generator control.
+	 *  HTML5
+	 */
+	keygen {
+
+	}
+
+	/**
+	 *  Represents the result of a calculation.
+	 *  HTML5
+	 */
+	output {
+		
+	}
+
+	/**
+	 *  Represents the completion progress of a task.
+	 *  HTML5
+	 */
+	progress {
+
+	}
+
+	/**
+	 *  Represents a scalar measurement (or a fractional value), within a known range.
+	 *  HTML5
+	 */
+	meter {
+
+	}

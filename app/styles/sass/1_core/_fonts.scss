@@ -1,0 +1,52 @@
+/*  ==========================================================================
+    Web Fonts
+    ========================================================================== */
+
+    /**
+     * FOR REFERENCE: Font-weights by numeric value / name. Side note: it is recommended that we to use the numeric value here to help clarify exactly which weight is getting referenced to.
+     * 100 = thin
+     * 200 = extra-light
+     * 300 = light
+     * 400 = normal, book
+     * 500 = medium
+     * 600 = demi-bold / semi-bold
+     * 700 = bold
+     * 800 = heavy / extra-bold / heavy
+     * 900 = black / extra-black / ultra-black
+     * Generic (non-explicitly weighted fonts, like a font-icon). Just default to using a regular font-weight:
+     */
+
+    /**
+     * Include Icon Fonts
+     */
+    @include font-face("Icomoon", font-files("icomoon/icomoon.woff", "icomoon/icomoon.ttf"), "icomoon/icomoon.eot", 400, normal);
+    @include font-face("skitz", font-files("skitz.woff", "skitz.ttf"), "skitz.eot", 400, normal);
+
+    /**
+     * Include Web Fonts
+     */
+    @include font-face("OpenSans Light", font-files("openSans/openSans-light.woff", "openSans/openSans-light.ttf"), "openSans/openSans-light.eot", 300, normal);
+    @include font-face("OpenSans Light Italic", font-files("openSans/openSans-lightItalic.woff", "openSans/openSans-lightItalic.ttf"), "openSans/openSans-lightItalic.eot", 300, italic);
+    @include font-face("OpenSans Regular", font-files("openSans/openSans-regular.woff", "openSans/openSans-regular.ttf"), "openSans/openSans-regular.eot", 400, normal);
+    @include font-face("OpenSans Italic", font-files("openSans/openSans-italic.woff", "openSans/openSans-italic.ttf"), "openSans/openSans-italic.eot", 400, italic);
+    @include font-face("OpenSans Bold", font-files("openSans/openSans-bold.woff", "openSans/openSans-bold.ttf"), "openSans/openSans-bold.eot", 700, normal);
+    @include font-face("OpenSans Bold Italic", font-files("openSans/openSans-bolditalic.woff", "openSans/openSans-bolditalic.ttf"), "openSans/openSans-bolditalic.eot", 700, italic);
+    @include font-face("OpenSans Semi Bold", font-files("openSans/openSans-semiBold.woff", "openSans/openSans-semiBold.ttf"), "openSans/openSans-semiBold.eot", 600, normal);
+    @include font-face("OpenSans Semi Bold Italic", font-files("openSans/openSans-semiBoldItalic.woff", "openSans/openSans-semiBoldItalic.ttf"), "openSans/openSans-semiBoldItalic.eot", 600, italic);
+    @include font-face("OpenSans Extra Bold", font-files("openSans/openSans-extraBold.woff", "openSans/openSans-extraBold.ttf"), "openSans/openSans-extraBold.eot", 800, normal);
+    @include font-face("OpenSans Extra Bold Italic", font-files("openSans/openSans-extraBoldItalic.woff", "openSans/openSans-extraBoldItalic.ttf"), "openSans/openSans-extraBoldItalic.eot", 800, italic);
+
+    /**
+     * Font Stacks
+     */
+    $sansNormal: "OpenSans Regular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansLight: "OpenSans Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansLightItalic: "OpenSans Light Italic", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansItalic: "OpenSans Italic", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansBold: "OpenSans Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansBoldItalic: "OpenSans Bold Italic", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansSemiBold: "OpenSans Semi Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansSemiBoldItalic: "OpenSans Semi Bold Italic", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansExtraBold: "OpenSans Extra Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    $sansExtraBoldItalic: "OpenSans Extra Bold Italic", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+

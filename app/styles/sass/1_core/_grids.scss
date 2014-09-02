@@ -1,0 +1,143 @@
+/*  ==========================================================================
+    Responsive Grid - with Singularity.gs Framework
+    ========================================================================== */
+	
+	/**
+	 * Gutter Style
+	 * - possible values: opposite (default), split
+	 *   https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#gutter-styles
+	 *    + Split - equal margin on either side of column
+	 *    + Opposite - "margin: 0" on leading side and full margin width on trainling end
+	 *      (left to right: margin is on the right, right to left: margin is on the left)
+	 * - additionally 'fixed' can be passed to use a fixed gutter width rather than percentage
+	 *   (ex: @include sgs-change('gutter styles', 'split' 'fixed');)
+	 */
+	@include add-gutter-style('split');
+
+	/**
+	 * Gutter Size
+	 * - represents a relationship to the column width (ie: gutter width is 1/3 of column width)
+	 * - should be expressed as a unitless number (ex: 1/3)
+	 */
+	@include add-gutter(1/3);
+
+	/**
+	 * Mobile First
+	 * - by default breakpoints and grids are mobile first
+	 * - uncomment the following to do desktop first:
+	 */
+	//@include sgs-change('mobile first', false);	
+	
+	/**
+	 * Output Format
+	 * - possible values: isolation (default), float
+	 * - Float is probably more familiar to you, it is the Gen-init default
+	 * - Isolation - http://palantir.net/blog/responsive-design-s-dirty-little-secret
+	 */
+	@include sgs-change('output', 'float');	
+	
+
+/*  ==========================================================================
+   	Grid Set Up
+    ========================================================================== */
+	
+	/**
+	 * Symmetric Grid
+	 * - grids can be passed a media query (ie: at 400px)
+	 */
+	@include add-grid(2);
+	@include add-grid(4 at 400px);
+	@include add-grid(8 at 700px);
+	@include add-grid(12 at 1024px);
+
+	/**
+	 * Asymetric Grid
+	 * - https://github.com/Team-Sass/Singularity/wiki/Creating-Grids#asymmetric-grids
+	 */
+	//@include add-grid(2 8 2 at 1024px);
+
+/*  ==========================================================================
+    DEBUG
+    ========================================================================== */
+
+	/**
+	 * Debug
+	 * - used to generate the preview gradient for visualizing columns
+	 */
+	@include sgs-change('debug', true);
+
+	/**
+	 * Background Grid
+	 * - adds a CSS gradient to an element for visualizing the grid
+	 */
+	[data-development-grid="show"]{
+		@include background-grid;
+	}
+
+/*  ==========================================================================
+   	Grid Usage (NOTICE: The exact implementation is up for debate)
+    ========================================================================== */
+	
+	/**
+	 * Step 1
+	 * - create placeholder classes to be extended by HTML classes
+	 */
+	@for $i from 1 through 2 {
+		%span_#{$i}_of_2 {
+			// less than 400px column span $i of 12
+			@include grid-span($i);
+		}
+	}
+	@for $i from 1 through 4 {
+		%span_#{$i}_of_4 {
+			@include breakpoint(400px) {
+				// greater than 400px column span $i of 12
+				@include grid-span($i);
+			}
+		}
+	}
+	@for $i from 1 through 8 {
+		%span_#{$i}_of_8 {
+			@include breakpoint(700px) {
+				// greater than 700px column span $i of 12
+				@include grid-span($i);
+			}
+		}
+	}
+	@for $i from 1 through 12 {
+		%span_#{$i}_of_12{
+			@include breakpoint(1024px) {
+				// greater than 1024px column span $i of 12
+				@include grid-span($i);
+			}
+		}
+	}
+	
+	/**
+	 * Step 2
+	 * - create a class to be used in HTML that has breakpoints baked in
+	 */
+	
+	/**	
+	 * Examples of common 8 column and 4 column grids
+	*/
+	.span_8 {
+		// Span 2 of 2 columns when screen width < 400px
+		@extend %span_2_of_2;
+		// Span 3 of 4 columns when screen width > 400px
+		@extend %span_3_of_4;
+		// Span 6 of 8 columns when screen width > 700px
+		@extend %span_6_of_8;
+		// Span 8 of 12 columns when screen width > 1024px
+		@extend %span_8_of_12;
+	}
+	.span_4 {
+		// Span 2 of 2 columns when screen width < 400px
+		@extend %span_2_of_2;
+		// Span 2 of 4 columns when screen width > 400px
+		@extend %span_2_of_4;
+		// Span 4 of 8 columns when screen width > 700px
+		@extend %span_4_of_8;
+		// Span 4 of 12 columns when screen width > 1024px
+		@extend %span_4_of_12;
+	}

@@ -1,0 +1,96 @@
+include "head.html"
+	<!-- Singularity: data-development-grid="show" press g to toggle visualization of your grid. 
+	XXX: Do not use on production -->
+	<body data-development-grid="show">
+
+		<!--
+		||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+		|||
+		|||
+		|||		Delete following content
+		|||
+		|||
+		||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+		-->
+
+		<header class="page-header">
+			<h1>Genuine init - Genuine Interactive's Front End Starting Point</h1>
+		</header>
+		<section class="overview span_8">
+			<header><h2>What is this?</h2></header>
+			<p>Genuine init is a department maintained starting point for front end projects. The Goals for this project are as follows:</p>
+			<ol>
+				<li>To be quick and easy to setup</li>
+				<li>To not require a lot of modification to get running</li>
+				<li>To maintain consistency with department standards</li>
+				<li>To include code for the lowest common denominator of use cases</li>
+				<li>To be non-opinionated about specific use cases or backend technologies</li>
+			</ol>
+			<p>It's important to note that Genuine init should be a very basic starting point that should be added on to. It will be important to understand the type of project that needs to be built and to plan for adding a more opinionated structure to it with more specific configuration.</p>
+		</section>
+
+		<aside class="why span_4">
+			<header>
+				<h3>Why do we need it?</h3>
+			</header>
+			<p>A trend that has been happening for a while is to start every project by copying the contents of a previous project and striping out all the contents until there's nothing left but boilerplate code. This causes problems:</p>
+			<ol>
+				<li>There is no consistency or agreement on standards from the beginning</li>
+				<li>Bad code and bad practices could be perpetuated from one project to the next.</li>
+				<li>This doesn't allow our starting code to stay current and evolve with the industries ecosystem.</li>
+				<li>This process can take a long time</li>
+			</ol>
+		</aside>
+
+		<section class="dependencies span_12">
+			<div class="span_4">
+				<header>
+					<h2>Dependencies</h2>
+				</header>
+				<ul>
+					<li>[node](http://nodejs.org/)</li>
+					<li>[ruby](https://www.ruby-lang.org/en/) - used for sass, compass, and singularity grid system</li>
+					<li>[bundler for ruby](http://bundler.io/) - used for singularity grid system</li>
+					<li>[bower](http://bower.io/) - manages front end libraries</li>
+					<li>[grunt](http://gruntjs.com/) - node task runner for building project</li>
+				</ul>
+			</div>
+			<aside class="installation span_8">
+				<h2>Installation</h2>
+				<p>Currently the process for installing this project is manual. The goal is to automate this process for a later release.</p>
+				<ol>
+					<li>clone this repository into your development folder</li>
+					<li>copy all files except for the .git directory into a new project folder</li>
+					<li>in the new project folder root run `bower install` from the command line</li>
+					<li>run `npm install` from the command line</li>
+					<li>run `bundle install`</li>
+					<li>run `grunt s` in the command line to start a static development server and open a new tab with the project loaded</li>
+				</ol>
+			</aside>
+		</section>
+		<section class="pc span_12">
+			<div class="span_8">
+				<header>
+					<h2>PC Quirks</h2>
+				</header>
+				<p>If you're using sass-globbing on PC - manually save your screen.scss prior to building.</p>
+			</div>
+		</section>
+
+		<!--
+		||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+		|||
+		|||
+		|||		/end Delete Content
+		|||
+		|||
+		||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+		-->
+
+
+		<!-- build:js scripts/app.built.js -->
+		<script data-main="scripts/app.main" src="scripts/bower_components/requirejs/require.js"></script>
+		<!-- /build -->
+
+</body>
+</html>

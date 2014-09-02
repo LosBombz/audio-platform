@@ -1,0 +1,18 @@
+{
+  "name": "init",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "underscore": "~1.6.0",
+    "backbone": "~1.1.0",
+    "requirejs": "~2.1.5",
+    "requirejs-text": "~2.0.5",
+    "GreenSock-JS": "https://github.com/greensock/GreenSock-JS.git#~1.13.0",
+    "soundmanager": "*",
+    "d3": "~3.4.0"
+  },
+  "devDependencies": {
+    "almond": "~0.2.9",
+    "singularity": "https://github.com/Team-Sass/Singularity.git#~1.2.1"
+  }
+}

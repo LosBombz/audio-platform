@@ -1,0 +1,28 @@
+
+// Footer heading and contact section:
+//		1. Contact open btn
+//			- social
+//		2. Contact info
+//			-deatialed social
+//		3. Gig info / play dates
+//		4. contact form
+//		
+
+.footer-wrap {
+	width: 100%;
+	position: fixed;
+	background: #222222;
+	z-index: 900;
+	height:0;
+	bottom: 0;
+}
+
+.contact-content {
+	padding: 40px;
+	font-size: 100px;
+	color: #fff;
+	.contact {
+
+	}
+}
+
